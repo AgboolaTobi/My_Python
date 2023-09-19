@@ -11,8 +11,8 @@
 # product10 = number * 10
 # print(product1,product2,product3,product4,product5,product6,product7,product8,product9,product10)
 
-# for number in range(1,11):
-#     print(number * 5, end=" ")
+for number in range(1,11):
+    print(number * 5, end=" ")
 #
 # for number in range(5,51,5):
 #     print(number, end=" ")

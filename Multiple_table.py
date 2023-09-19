@@ -1,0 +1,5 @@
+number = 1
+count = 1
+while count <= 12:
+    print("1*", count, "=", count * number, "\t\t\t", "2 * ", count, "=", count * number * 2, "\t\t\t", "3 * ", count, "=", count * number * 3, "\t\t\t", "4 * ", count, "=", count * number * 4, "\t\t", "5 * ", count, "=", count * number * 5, "\t\t", "6 * ", count, "=", count * number * 6, "\t\t", "7 * ", count, "=", count * number * 7, "\t\t", "8 * ", count, "=", count * number * 8, "\t\t", "9 * ", count, "=", count * number * 9, "\t\t", "10 * ", count, "\t=", count * number * 10, "\t\t\t", "11 * ", count, "\t=", count * number * 11, "\t\t\t", "12 * ", count, "\t=", count * number * 12, "\t\t\t", "13 * ", count, "\t=", count * number * 13, "\t\t\t", "14 * ", count, "\t=", count * number * 14, "\t\t\t", "15 * ", count, "\t=", count * number * 15, "\t\t\t", "16 * ", count, "\t=", count * number * 16, "\t\t\t", "17 * ", count, "=", count * number * 17, "\t\t\t", "18 * ", count, "\t\t", "=", (count * number * 18), "\t\t\t", "19 * ", count, "\t\t", "=", count * number * 19, "\t\t\t", "20 * ", count, "\t\t", "=", count * number * 20)
+    count += 1

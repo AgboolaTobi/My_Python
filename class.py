@@ -122,7 +122,7 @@ import random
 # your program generate random number between 1 and 10,
 # asks users to guess a number
 # if user_input is incorrect, keep requesting for input.
-# Once input is correct and matches the ramdom number,it should tell the user it is correct and stop
+# Once input is correct and matches the random number,it should tell the user it is correct and stop
 #
 # print("""===Instructions===
 # Guess a number between 1 and 3.
@@ -132,7 +132,7 @@ import random
 computer = (random.randint(1, 10))
 user_guess = int(input("Enter your guess between 1 and 10: "))
 print(computer)
-while computer != u  ser_guess:
+while computer != user_guess:
     user_guess = int(input("Enter your guess between 1 and 10: "))
     computer = (random.randint(1, 10))
     print(computer)
