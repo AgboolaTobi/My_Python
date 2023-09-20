@@ -16,3 +16,7 @@ else:
     mid = len(number) // 2
     median = number[mid]
 print(median)
+
+
+# nice job pls stop naming my file like java file, this should be median.py 
+# median.py file may already exist in python so you look for another suitable name sir
