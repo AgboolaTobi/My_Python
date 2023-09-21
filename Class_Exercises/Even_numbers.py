@@ -25,3 +25,4 @@ for count in range(0, 51, 2):
 print(even_numbers)
 average = sum(even_numbers) / len(even_numbers)
 print(average)
+
