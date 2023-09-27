@@ -34,11 +34,12 @@
 # print(check_palindrome(797))
 
 
-List = [1, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10]
+List = [1, 2, 1, 3, 3, 4, 5, 6, 7, 8, 9, 10]
+
 
 def custom_sorted(ls: List) -> List:
     for i in range(0, len(List)):
-        for j in range(i+1, len(List)):
+        for j in range(i + 1, len(List)):
             if List[i] >= List[j]:
                 List[i], List[j] = List[j], List[i]
     return List
