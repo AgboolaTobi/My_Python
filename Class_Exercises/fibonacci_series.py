@@ -11,7 +11,7 @@ while number1 < 50:
     count += 1
 
 # for loop
-print("\nfor loop done without count ")
+print("\nfor loop done without count ", total)
 
 number1 = 0
 number2 = 1
@@ -24,7 +24,7 @@ for i in range(0, 51):
     number2 = total
     total = number1 + number2
 
-print("\nwhile loop done without count ")
+print("\nwhile loop done without count ", total)
 # while loop done without count
 number1 = 0
 number2 = 1
