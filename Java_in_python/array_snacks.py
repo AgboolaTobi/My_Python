@@ -27,6 +27,8 @@ def check_element(my_array, to_check):
             return True
     return False
 
+# just return the expression, it will evaluate to true or false
+
 
 def odd_position_element(my_array):
     oddly_positined = []
@@ -50,6 +52,8 @@ def running_total(my_array):
         collect_total = f"{total}"
         name += collect_total + " "
     return name
+# what are you trying to do here?
+# if it to get the total, you dont need the range function, just loop through
 
 
 def is_palindrome(my_array):
@@ -58,6 +62,8 @@ def is_palindrome(my_array):
             return False
     return True
 
+# can u refactor this and return the final expression will give true or false
+
 
 def sum_for_loop(my_array):
     sum_total = 0
@@ -65,6 +71,7 @@ def sum_for_loop(my_array):
         sum_total = sum_total + my_array[i]
     return sum_total
 
+# just loop through without using the range function
 
 def sum_while_loop(my_array):
     sum_total = 0
@@ -79,6 +86,8 @@ def concatenation_of_lists(my_array1, my_array2):
     for i in my_array2:
         my_array1.append(i)
     return my_array1
+
+# after we discus list in class, you will refactor this into one line... lol
 
 
 def alternate_combination(myArray1, myArray2):
