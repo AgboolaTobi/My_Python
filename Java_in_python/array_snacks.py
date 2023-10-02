@@ -18,6 +18,8 @@ def reverse_list(my_array):
 
     return my_array
 
+# the reverse method could me more shorter
+
 
 def check_element(my_array, to_check):
     for count in my_array:
