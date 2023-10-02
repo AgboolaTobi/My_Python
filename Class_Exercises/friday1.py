@@ -16,6 +16,7 @@ def average_of_score(my_scores, sum_of_score):
     average = sum_of_score / len(my_scores)
     return average
 
+
 my_scores = []
 sum_of_score = 0
 average = 0
@@ -23,7 +24,5 @@ for scores in range(0, 10):
     scores = int(input("Enter score: "))
     my_scores.append(scores)
 print(my_scores)
-
-
 
 print("The average of the scores = ", average_of_score(my_scores, sum_of_score))
