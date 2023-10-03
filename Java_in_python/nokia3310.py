@@ -58,7 +58,7 @@ def nokia_function():
             elif options_selection == 3:
                 nokia_function()
         elif phonebook_selection == 9:
-            print("Speed dails")
+            print("Speed dials")
         elif phonebook_selection == 10:
             print("Voice tags")
         elif phonebook_selection == 11:
@@ -356,6 +356,8 @@ def nokia_function():
                 print("Restore factory settings")
             elif restore_selection == 2:
                 nokia_function()
+        elif setting_selection == 5:
+            nokia_function()
     elif selection == 7:
         print("""
         Call divert
