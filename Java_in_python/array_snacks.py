@@ -18,6 +18,7 @@ def reverse_list(my_array):
 
     return my_array
 
+
 # the reverse method could me more shorter
 
 
@@ -25,10 +26,11 @@ def check_element(my_array, to_check):
     for count in my_array:
         if count == to_check:
             return True
-    return False
+    return check_element()
+
 
 # just return the expression, it will evaluate to true or false
-
+#  Done sir
 
 def odd_position_element(my_array):
     oddly_positined = []
@@ -52,26 +54,34 @@ def running_total(my_array):
         collect_total = f"{total}"
         name += collect_total + " "
     return name
+
+
 # what are you trying to do here?
 # if it to get the total, you dont need the range function, just loop through
 
+# Trying to get the total at each count sir and not just the final total
 
 def is_palindrome(my_array):
     for element in range(0, int(len(my_array) / 2)):
-        if my_array[element] != my_array[len(my_array) - element - 1]:
-            return False
-    return True
+        if my_array[element] == my_array[len(my_array) - element - 1]:
+            return True
+        else:
+            False
+    return is_palindrome()
+
 
 # can u refactor this and return the final expression will give true or false
-
+# Done sir
 
 def sum_for_loop(my_array):
     sum_total = 0
-    for i in range(0, len(my_array)):
+    for i in len(my_array):
         sum_total = sum_total + my_array[i]
     return sum_total
 
+
 # just loop through without using the range function
+# Done sir
 
 def sum_while_loop(my_array):
     sum_total = 0
@@ -83,12 +93,12 @@ def sum_while_loop(my_array):
 
 
 def concatenation_of_lists(my_array1, my_array2):
-    for i in my_array2:
-        my_array1.append(i)
-    return my_array1
+    my_array = my_array1 + my_array2
+    return my_array
 
-# after we discus list in class, you will refactor this into one line... lol
 
+# after we discuss list in class, you will refactor this into one line... lol
+#  Done sir(Thanks sir !)
 
 def alternate_combination(myArray1, myArray2):
     merged_array = []
@@ -110,4 +120,8 @@ def digits_to_list(my_array):
     return int_array
 
 
-print(digits_to_list('2345'))
+my_array1 = [1, 2, 3, 4]
+my_array2 = [6, 7, 9, 8]
+
+array = my_array1 + my_array2
+print(array)

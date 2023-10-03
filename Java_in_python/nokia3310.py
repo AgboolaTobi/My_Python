@@ -27,7 +27,7 @@ def nokia_function():
         8. Options
         9. Speed dials
         10. Voice tags
-        11. Go back to main menu
+        11. Go back to phonebook
         """)
         phonebook_selection = int(input("Select an option: "))
         if phonebook_selection == 1:
