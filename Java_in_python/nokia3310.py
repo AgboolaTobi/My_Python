@@ -67,18 +67,16 @@ def nokia_function():
         print("""
         == MESSAGES ==
         1. Write messages
-        2. Inbox== MESSAGES ==
-                        1. Write messages
-                        2. Inbox
-                        3. Outbox
-                        4. Picture messages
-                        5. Templates
-                        6. Smileys
-                        7. Message settings
-                        8. Info service
-                        9. Voice mailbox number
-                        10. Service command editor
-                        11. Go back to main menu""")
+        2. Inbox
+        3. Outbox
+        4. Picture messages
+        5. Templates
+        6. Smileys
+        7. Message settings
+        8. Info service
+        9. Voice mailbox number
+        10. Service command editor
+        11. Go back to main menu""")
         message_selection = int(input("Select an option: "))
         if message_selection == 1:
             print("Write message")
@@ -297,19 +295,147 @@ def nokia_function():
                 print("Automatic Answer")
             elif call_setting_selection == 7:
                 nokia_function()
+        elif setting_selection == 2:
+            print(""""
+            Phone settings
+            1. Language
+            2. Cell info display
+            3. Welcome note
+            4. Network selection
+            5. Lights
+            6. Confirm sim service action
+            7. Go Back to Main Menu""")
+            phone_setting_selection = int(input("Select an option: "))
+            if phone_setting_selection == 1:
+                print("Language")
+            elif phone_setting_selection == 2:
+                print("Cell info display")
+            elif phone_setting_selection == 3:
+                print("Welcome note")
+            elif phone_setting_selection == 4:
+                print("Network selection")
+            elif phone_setting_selection == 5:
+                print("Lights")
+            elif phone_setting_selection == 6:
+                print("Confirm sim service action")
+            elif phone_setting_selection == 7:
+                nokia_function()
+        elif setting_selection == 3:
+            print("""
+            Security settings
+            1. Pin code request
+            2. Call barring service
+            3. Fixed dialling
+            4. Closed user group
+            5. Phone security
+            6. Change access code
+            7. Go back to Main Menu""")
+            security_setting_selection = int(input("Select an option: "))
+            if security_setting_selection == 1:
+                print("Pin code request")
+            elif security_setting_selection == 2:
+                print("Call barring service")
+            elif security_setting_selection == 3:
+                print("Fixed dialling")
+            elif security_setting_selection == 4:
+                print("Closed user group")
+            elif security_setting_selection == 5:
+                print("Phone security")
+            elif security_setting_selection == 6:
+                print("Change access code")
+            elif security_setting_selection == 7:
+                nokia_function()
+        elif setting_selection == 4:
+            print("""
+            Restore factory settings
+            1-> Restore factory settings
+            2-> Go back to main menu
+            """)
+            restore_selection = int(input("Select an option: "))
+            if restore_selection == 1:
+                print("Restore factory settings")
+            elif restore_selection == 2:
+                nokia_function()
     elif selection == 7:
-        print("Call divert")
+        print("""
+        Call divert
+        1->Call divert
+        2-> Go back to main menu
+        """)
+        call_divert_selection = int(input("Select an option: "))
+        if call_divert_selection == 1:
+            print("Call divert")
+        elif call_divert_selection == 2:
+            nokia_function()
     elif selection == 8:
-        print("Games")
-    elif selection == 9:
-        print("Calculator")
+        print("""
+        Games
+        1-> Games
+        2-> Go back to main menu
+        """)
+        games_selection = int(input("Select an option: "))
+        if games_selection == 1:
+            print("Games")
+        elif games_selection == 2:
+            nokia_function()
     elif selection == 10:
-        print("Reminders")
+        print("""
+        Reminders
+        1-> Reminders
+        2-> Go back to main menu
+        """)
+        reminders_selection = int(input("Select an option: "))
+        if reminders_selection == 1:
+            print("Reminders")
+        elif reminders_selection == 2:
+            nokia_function()
     elif selection == 11:
-        print("Clock")
+        print(""""
+        Clock
+        1. Alarm Clock
+        2. Clock Settings
+        3. Date Setting
+        4. Stop Watch
+        5. CountDown timer
+        6. Auto Update Of Date And Time
+        7. Main Menu
+        """)
+        clock_selection = int(input("Select an option: "))
+        if clock_selection == 1:
+            print("Alarm Clock")
+        elif clock_selection == 2:
+            print("Clock Settings")
+        elif clock_selection == 3:
+            print("Date Setting")
+        elif clock_selection == 4:
+            print("Stop Watch")
+        elif clock_selection == 5:
+            print("CountDown timer")
+        elif clock_selection == 6:
+            print("Auto Update Of Date And Time")
+        elif clock_selection == 7:
+            nokia_function()
     elif selection == 12:
-        print("Profiles")
+        print("""
+        Profiles
+        1-> Profiles
+        2-> Go back to main menu
+        """)
+        proflie_selection = int(input("Select an option: "))
+        if proflie_selection == 1:
+            print("Profiles")
+        elif proflie_selection == 2:
+            nokia_function()
     elif selection == 13:
-        print("SIM Services")
+        print("""
+        SIM Services
+        1->SIM Services
+        2. Go back to main menu
+        """)
+        sim_selection = int(input("Select an option: "))
+        if sim_selection == 1:
+            print("SIM Services")
+        elif sim_selection == 2:
+            nokia_function()
 
 nokia_function()
