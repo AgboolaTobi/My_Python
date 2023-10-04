@@ -18,3 +18,5 @@ else:
     Deposit = 25/100 * price
     print("Deposit: ", Deposit)
     print("******************")
+
+# refactor this to use multiline string in ur print, so u use one or two print statement for everything
