@@ -1,6 +1,6 @@
 def menu():
     user_menu = input("""
-===List of Menu Functions===    
+===List of Menu Functions===
 1. Phone book
 2. Message
 3. Chat
@@ -13,7 +13,7 @@ def menu():
 10. Reminders
 11. Clock
 12. Profiles
-13. SIM Services   
+13. SIM Services
     """)
     if user_menu == "1":
         phone_book()
@@ -58,8 +58,8 @@ def phone_book():
 8. Options
 9. Speed dials
 10. Voice tags
-11. Go back to main menu    
-      
+11. Go back to main menu
+
     """)
     phonebook_selection = input("Select an option: ")
     if phonebook_selection == "1":
@@ -471,17 +471,62 @@ def games():
         games()
 
 
+def addition(number1, number2):
+    result = number1 + number2
+    return result
+
+
+def subtraction(number1, number2):
+    result = number1 - number2
+    return result
+
+
+def multiplication(*numbers):
+    result = 1
+    for number in numbers:
+        result *= number
+    return result
+
+
+def division(number1, number2):
+    return number1 / number2 or number2 / number1
+
+
 def calculator():
     print("""
             Calculator
-            1. Calculator
-            2. Go back to main menu
+            1. Addition
+            2 Subtraction
+            3. Multiplication
+            4. Division
+            5. Go back to main menu
             """)
     calculator_selection = input("Select an option: ")
+
     if calculator_selection == "1":
-        print("Calculator")
+        number1 = int(input("Enter number: "))
+        number2 = int(input("Enter number: "))
+        print(number1, " + ", number2, " = ",addition(number1, number2))
+        calculator()
     elif calculator_selection == "2":
+        number1 = int(input("Enter number: "))
+        number2 = int(input("Enter number: "))
+        print(number1, " - ", number2, " = ", subtraction(number1, number2))
+        calculator()
+    elif calculator_selection == "3":
+        number1 = int(input("Enter number: "))
+        number2 = int(input("Enter number: "))
+        print(number1, " multiplied by ", number2, " = ", multiplication(number1, number2))
+        calculator()
+    elif calculator_selection == "4":
+        number1 = int(input("Enter number: "))
+        number2 = int(input("Enter number: "))
+        print(number1, " divided by ", number2, " = ", division(number1, number2))
+        calculator()
+    elif calculator_selection == "5":
         menu()
+    else:
+        calculator()
 
 
 def reminders():
