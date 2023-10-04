@@ -19,7 +19,7 @@ def reverse_list(my_array):
     return my_array
 
 
-# the reverse method could me more shorter
+# the reverse method could to be shorter
 
 
 def check_element(my_array, to_check):
