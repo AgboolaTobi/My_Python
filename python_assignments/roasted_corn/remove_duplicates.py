@@ -16,3 +16,5 @@ for i in numbers:
 print(mode_numbers)
 print(different_numbers)
 
+# good agorithms, can u refactor ??
+
