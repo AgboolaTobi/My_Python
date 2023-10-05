@@ -20,10 +20,10 @@ print(list2)
 # #     print(i, end=" ")
 #
 #
-# list3 = [1, 1.2, 'joy', True]
-# print(list3)
-# list4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-# print(list4[0:7:2])
+list3 = [1, 1.2, 'joy', True]
+print(list3)
+list4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+print(list4[0:7:2])
 
 # result = list3 += "Good"
 # print(result)
