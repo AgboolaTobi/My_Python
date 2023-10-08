@@ -527,7 +527,7 @@ def calculator():
     3. Multiplication
     4. Division
     5. Square
-    6. Squareroot
+    6. Square_root
     7. Go back to main menu
     """)
     calculator_selection = input("Select an option: ")
