@@ -25,7 +25,18 @@ print(list3)
 list4 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 print(list4[0:7:2])
 
+
 # result = list3 += "Good"
 # print(result)
 
+# the function defined below returns the position/ index of an item in a list
 
+def my_index(li: list, n):
+    index = 0
+    for i in range(len(li)):
+        if li[i] == n:
+            index = i
+    return index
+
+
+print(my_index(list4, 5))

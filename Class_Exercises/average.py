@@ -8,10 +8,9 @@ score7 = int(input("Enter your score: "))
 score8 = int(input("Enter your score: "))
 score9 = int(input("Enter your score: "))
 score10 = int(input("Enter your score: "))
-total = (score1 + score2 + score3 + score4 + score5 + score6 + score7 +score8 + score9 + score10)
-average = total/10
-print("The average score of the 10 students =",total)
-
+total = (score1 + score2 + score3 + score4 + score5 + score6 + score7 + score8 + score9 + score10)
+average = total / 10
+print("The average score of the 10 students =", total)
 
 count = 0
 sum = 0
@@ -23,9 +22,6 @@ while count < 10:
 average = sum / count
 print(f"And the total score of the 10 students = {sum:.2f}")
 print("The average score of 10 students =", average)
-
-
-
 
 count = 0
 sum = 0
@@ -50,7 +46,7 @@ while score != -1:
     count += 1
     score = int(input("Enter student score or -1 to stop: "))
 average = total / count
-print("The   average score of the students =",f"{average:.3f}")
+print("The   average score of the students =", f"{average:.3f}")
 
 count = 1
 multiples = 6
@@ -72,5 +68,3 @@ while multiple <= 3000:
     multiple = multiple * 6
     if multiple <= 3000:
         print(multiple, end=" ")
-
-m

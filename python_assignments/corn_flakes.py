@@ -19,13 +19,3 @@ def unpacking(tuple1):
         created_tuple += (tuple1[i], tuple1[0])
         return created_tuple
 
-
-def Sort_Tuple(tuple1):
-    Len = len(tuple1)
-    for i in range(0, Len):
-        for j in range(0, (Len - i - 1)):
-            if tuple[j][1] > tuple[j + 1][1]:
-                temp = tuple[j]
-                tuple = tuple[j + 1]
-                tuple[j + 1] = temp
-    return temp
