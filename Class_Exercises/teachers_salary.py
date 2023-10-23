@@ -8,7 +8,7 @@ def your_salary():
         gross_salary = number_of_periods * rate
     elif number_of_periods > 100:
         (gross_salary) = (100 * rate) + (number_of_periods - 100) * 25
-    return f'Teacher: {teachers_name} \nTotal Periods: {number_of_periods} for the month of {month}\nGross salary :$ {gross_salary}'
+    return f'Teacher: {teachers_name} \nTotal Periods: {number_of_periods} periods for the month of {month}\nGross salary :$ {gross_salary}'
 
 
 print("""

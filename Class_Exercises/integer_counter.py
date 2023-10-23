@@ -2,7 +2,7 @@ def check_and_count_int(numbers: list):
     store = []
     for _ in numbers:
         for elements in numbers:
-            if elements == 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
+            if elements != 1 or 2 or 3 or 4 or 5 or 6 or 7 or 8 or 9:
                 store.append(elements)
 
     return len(store)
