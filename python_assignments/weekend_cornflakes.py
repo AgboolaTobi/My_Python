@@ -1,15 +1,3 @@
-# list1 = []
-#     list2 = []
-#     length = len(my_list)
-#     if len(my_list) % 2 != 0:
-#         return my_list
-#     else:
-#         for elements in my_list:
-#             if length == length / 2:
-#                 list1.append(elements)
-#             if length > length / 2:
-#                 list2.append(elements)
-#         return list1, list2
 def split_list(my_list):
     half_of_length = len(my_list) // 2
     if len(my_list) % 2 != 0:
@@ -59,7 +47,7 @@ def difference_of_max_and_min2(my_list):
     return maximum - minimum
 
 
-print(difference_of_max_and_min2([10, 75, 20, 30, 15, 5, 40, 25, 40, 35]))
+# print(difference_of_max_and_min2([10, 75, 20, 30, 15, 5, 40, 25, 40, 35]))
 
 
 # def two_lists_to_dictionary(my_list1, my_list2):
@@ -75,17 +63,72 @@ print(difference_of_max_and_min2([10, 75, 20, 30, 15, 5, 40, 25, 40, 35]))
 # print(two_lists_to_dictionary(['a', 'b', 'c', 'd', 'e'], [1, 2, 3, 4, 5]))
 
 
-def list_to_dictionary(my_list):
+def list_to_dictionary(my_list, checker):
     my_dictionary = {}
-    for element in my_list:
-        my_dictionary.update({element[0]: element})
-    add_new = input("Enter a key: ").lower()
-    for element in my_list:
-        if add_new not in my_list:
-            my_dictionary.update({add_new[0].capitalize(): add_new})
+    for elements in my_list:
+        my_dictionary.update({elements[0]: elements})
+        my_dictionary.update({checker[0]: checker})
+    if checker in my_list:
+        my_dictionary.update({checker[0].capitalize(): checker})
     return my_dictionary
 
 
 sample_input = ['apple', 'banana', 'coconut']
-print(list_to_dictionary(sample_input))
-print(list_to_dictionary(sample_input).update({'c': 'corn'}))
+print(list_to_dictionary(sample_input, 'crab'))
+
+
+def list_to_dictionary2(my_list):
+    dict = {}
+    for entry in my_list:
+        dict.update({entry[0]: entry})
+    return dict
+
+
+# print(list_to_dictionary(sample_input))
+# print(list_to_dictionary2(sample_input))
+
+
+def two_list_to_dictionary(my_list1, my_list2):
+    if len(my_list1) != len(my_list2):
+        return f'{my_list1}'
+    else:
+        return dict(zip(my_list1, my_list2))
+
+
+input1 = ['a', 'b', 'c', 'd', 'e']
+input2 = [1, 2, 3, 4, 5]
+
+# print(two_list_to_dictionary(input1, input2))
+
+
+def remove_multiple_empty_strings(my_list):
+    result = []
+
+
+def list_to_dictionary5(my_list, checker):
+    my_dictionary = {}
+    if checker in my_list:
+        for elements in my_list:
+            return my_dictionary.update({elements[0]: elements})
+    else:
+        my_dictionary.update({checker[0].capitalize(): checker})
+        return my_dictionary
+
+
+def list_to_dictionary_correction(my_list):
+    dictionary = {}
+    for count in my_list:
+        result = count[0]
+        if result in dictionary:
+            result = count[0].upper()
+        dictionary[result] = count
+    return dictionary
+
+
+sample_input = ['apple', 'banana', 'coconut']
+# print(list_to_dictionary_correction(sample_input))
+
+
+def two_lists_to_dictionary_correction(list1, list2):
+    return {value1: value2 for (value1, value2) in enumerate(zip(list1, list2))}
+

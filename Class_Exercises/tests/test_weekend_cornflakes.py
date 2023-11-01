@@ -22,9 +22,9 @@ class Test(TestCase):
     def test_list_to_dictionary1(self):
         sample_input = ['apple', 'banana', 'coconut']
         output = {'a': 'apple', 'b': 'banana', 'c': 'coconut'}
-        self.assertEqual(weekend_cornflakes.list_to_dictionary(sample_input), output)
+        self.assertEqual(weekend_cornflakes.list_to_dictionary_correction(sample_input), output)
 
     def test_list_to_dictionary2(self):
-        sample_input = ['apple', 'banana', 'coconut']
-        output = {'a': 'apple', 'b': 'banana', 'c': 'coconut', 'C': 'corn'}
-        self.assertEqual(weekend_cornflakes.list_to_dictionary(sample_input), output)
+        sample_input = ['apple', 'banana', 'coconut', 'about']
+        output = {'a': 'apple', 'b': 'banana', 'c': 'coconut',  'A': 'about'}
+        self.assertEqual(weekend_cornflakes.list_to_dictionary_correction(sample_input), output)
