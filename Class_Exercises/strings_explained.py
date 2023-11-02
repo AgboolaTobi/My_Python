@@ -144,9 +144,9 @@ print("True" if re.fullmatch(r'[A-Z]{2,}', 'AGgboolatoby') else "False")
 # between 2 and 6
 print("True" if re.fullmatch(r'[A-Z]{2,6}', 'AGgboolatoby') else "False")
 # ? matches zero or one occurrence of a sub expression
-'Yes' if re.fullmatch('labell?ed', 'labelled')else 'Yes'
-'Yes' if re.fullmatch('label?ed', 'labeled')else 'Yes'
-'Yes' if re.fullmatch('labell?ed', 'labellled')else 'No'
+'Yes' if re.fullmatch('labell?ed', 'labelled') else 'Yes'
+'Yes' if re.fullmatch('label?ed', 'labeled') else 'Yes'
+'Yes' if re.fullmatch('labell?ed', 'labellled') else 'No'
 
 # Replacing Substring & Splitting String
 # the sub replaces all pattern in a string. Example: re.sub(r'\t',',','1\t2\t3\t4') -> '1, 2, 3, 4'
@@ -156,6 +156,10 @@ print("True" if re.fullmatch(r'[A-Z]{2,6}', 'AGgboolatoby') else "False")
 # the string to be searched ('1\t2\t3\t4')
 
 # {n,} -> matches at least n occurrence or more
-Example: 'Found' if re.fullmatch(r'\d{3,}','123')else 'Not found'
+Example: 'Found' if re.fullmatch(r'\d{3,}', '123') else 'Not found'
 # {n,m} -> matches between n and my_digit2
-example: 'Yes' if re.fullmatch(r'\d{3,6}', '123')else 'No'
+example: 'Yes' if re.fullmatch(r'\d{3,6}', '123') else 'No'
+
+# READ ABOUT THE PYTHON RE MODULE
+toby = re.split(r',\s*','1, 2, 3, 4, 5, 6, 7 ,8')
+print(toby)

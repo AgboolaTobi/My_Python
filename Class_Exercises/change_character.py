@@ -4,7 +4,7 @@ def change_occurrence(words: str):
     return first_letter + result[1:]
 
 
-print(change_occurrence('restart'))
+# print(change_occurrence('restart'))
 
 # def change_occurrence(letters, index):
 #     result = " "
@@ -14,3 +14,4 @@ print(change_occurrence('restart'))
 #         result.replace(range(letters[0], len(letters)))
 #     return result
 # print(change_occurrence('restart'))
+print(5 // 2)
