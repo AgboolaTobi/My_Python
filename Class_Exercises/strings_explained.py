@@ -1,3 +1,5 @@
+import re
+
 name = " arua "
 print(name * 10)
 print(f'[{2:^10}]')
@@ -11,12 +13,12 @@ print(name.upper())
 print(name.join("toby"))
 print(" ".join(['a', 'b', 'c', 'd', 'e']))
 print(name.count("a"))
-name1 = input("Enter name: ").lower()
+# name1 = input("Enter name: ").lower()
 name2 = "precious"
-print(name1 == name2)
-print(ord('p'))
-print(ord('P'))
-print(name1 > name2)
+# print(name1 == name2)
+# print(ord('p'))
+# print(ord('P'))
+# print(name1 > name2)
 if name2.startswith('p'):
     print("bad bitch")
 name3 = "apple"
@@ -65,9 +67,9 @@ print(result_semi3)
 # the join method takes and iterable and returns the items together
 
 alphabets = ['A', 'B', 'C', 'D', 'E', 'F']
-print("". join(alphabets))
-print("-". join(alphabets))
-print(" and ". join(alphabets))
+print("".join(alphabets))
+print("-".join(alphabets))
+print(" and ".join(alphabets))
 
 # partition method... splits into three tuples based on its arguments i.e the part before it,the argument itself and
 # the part after the argument
@@ -84,3 +86,76 @@ sample_input3 = 'ope-2003'
 print(sample_input3.isalnum())
 
 print(sample_input.strip(sample_input[0]))
+# raw strings
+# allows us to treat our strings exactly the way it is. e.g to represent window file path
+# file_path = 'C:\\MyFolder\\MySubFolder\\MyFile.txt'
+# but with raw strings we can write exactly the way it is
+# file_path = r'C:\MyFolder\MySubFolder\MyFile.txt'
+# strip method will remove spaces around the string
+
+
+word = "it's a boy"
+print(word.upper().lower().title())
+# the above is a chain method call
+# regular expression
+# can be used to match method or validate before a string is processed
+# useful in web-scraping, transforming and cleaning data
+# re module from psl(python standard library)
+
+# metaCharacter
+
+my_digit = '01234'
+my_digit2 = '0808952954'
+print(re.fullmatch(my_digit, '01234'))
+print("True" if re.fullmatch(my_digit, '0808952954') else "False")
+print("True" if re.fullmatch('\d{11}', '0808952954') else "False")
+print("True" if re.fullmatch('\d\d\d\d\d\d\d\d\d\d\d', '01234') else "False")
+print("True" if re.fullmatch(r'\w{11}', '08068952954') else "False")
+# the below will return true if everything in the string is numeric
+print("True" if re.fullmatch(r'\D{11}', '08068952954') else "False")
+# the below would print would return true since we now have numeric
+print("True" if re.fullmatch(r'\D{11}', 'preciouspre') else "False")
+
+# character classes
+# \d -> any digits 0-9
+# \D -> any character that is not 0-9
+# \s -> any white space character i.e spaces,tab,newline
+# \S -> any character that is not whitespace
+# \w -> alphanumeric character
+# \W -> character that is not alphanumeric
+
+# CUSTOM CHARACTER CLASS[]
+# [aeiou] -> matches lowercase aeiou
+# [A-Z] -> matches capital letter A to Z
+# [a-z] -> matches lowercase letter a to z
+# print(etc..)
+# re.fullmatch(r'[A-Z][a-z]*', 'Asa')
+# quantifier -> indicates zero or more occurrence of custom class it follows
+# ^ quantifer -> indicates character that is not specified. ->
+# Example: 'Match if re.fullmatch([^a-z]', 'A') else 'No Match' output
+# the * and + are greedy,they match 1 or more
+print("True" if re.fullmatch(r'[A-Z][a-z]*', 'Toby') else "False")
+print("True" if re.fullmatch(r'[A-Z]*[a-z]*', 'AGgboolatoby') else "False")
+# ^ quantifier -> indicates character that is not specified
+print("True" if re.fullmatch(r'[A-Z]+[a-z]*', 'Toby') else "False")
+print("True" if re.fullmatch(r'[A-Z]*[a-z]+', 'AGgboolatoby') else "False")
+# the  below means 2 or more
+print("True" if re.fullmatch(r'[A-Z]{2,}', 'AGgboolatoby') else "False")
+# between 2 and 6
+print("True" if re.fullmatch(r'[A-Z]{2,6}', 'AGgboolatoby') else "False")
+# ? matches zero or one occurrence of a sub expression
+'Yes' if re.fullmatch('labell?ed', 'labelled')else 'Yes'
+'Yes' if re.fullmatch('label?ed', 'labeled')else 'Yes'
+'Yes' if re.fullmatch('labell?ed', 'labellled')else 'No'
+
+# Replacing Substring & Splitting String
+# the sub replaces all pattern in a string. Example: re.sub(r'\t',',','1\t2\t3\t4') -> '1, 2, 3, 4'
+# it receives 3 arguments
+# the pattern to match
+# the replacement text (',') and
+# the string to be searched ('1\t2\t3\t4')
+
+# {n,} -> matches at least n occurrence or more
+Example: 'Found' if re.fullmatch(r'\d{3,}','123')else 'Not found'
+# {n,m} -> matches between n and my_digit2
+example: 'Yes' if re.fullmatch(r'\d{3,6}', '123')else 'No'

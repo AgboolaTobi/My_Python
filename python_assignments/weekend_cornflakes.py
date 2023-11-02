@@ -98,11 +98,16 @@ def two_list_to_dictionary(my_list1, my_list2):
 input1 = ['a', 'b', 'c', 'd', 'e']
 input2 = [1, 2, 3, 4, 5]
 
+
 # print(two_list_to_dictionary(input1, input2))
 
 
 def remove_multiple_empty_strings(my_list):
-    result = []
+    return [element for element in my_list if len(element) > 0]
+
+
+sample_list = ['', 'ABC', 'xyz', '', 'abc', 'XYZ']
+print(remove_multiple_empty_strings(sample_list))
 
 
 def list_to_dictionary5(my_list, checker):
@@ -126,9 +131,10 @@ def list_to_dictionary_correction(my_list):
 
 
 sample_input = ['apple', 'banana', 'coconut']
+
+
 # print(list_to_dictionary_correction(sample_input))
 
 
 def two_lists_to_dictionary_correction(list1, list2):
     return {value1: value2 for (value1, value2) in enumerate(zip(list1, list2))}
-

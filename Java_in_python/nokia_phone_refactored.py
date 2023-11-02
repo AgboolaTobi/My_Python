@@ -50,7 +50,7 @@ def phone_book():
     ===PHONEBOOK===
     1. Search
     2. Service Nos
-    3.Add name
+    3. Add name
     4. Erase
     5. Edit
     6. Assign tone
