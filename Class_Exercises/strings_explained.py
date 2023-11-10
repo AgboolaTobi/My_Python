@@ -1,4 +1,5 @@
 import re
+import time
 
 name = " arua "
 print(name * 10)
@@ -161,5 +162,42 @@ Example: 'Found' if re.fullmatch(r'\d{3,}', '123') else 'Not found'
 example: 'Yes' if re.fullmatch(r'\d{3,6}', '123') else 'No'
 
 # READ ABOUT THE PYTHON RE MODULE
-toby = re.split(r',\s*','1, 2, 3, 4, 5, 6, 7 ,8')
+toby = re.split(r',\s*', '1, 2, 3, 4, 5, 6, 7 ,8')
+toby2 = re.split(r' *', '12345678')
 print(toby)
+
+print(toby2)
+# Restricting matches to beginning or end of string
+# ^ metacharacter restrict match to the beginning of a string
+# e.g result = re.search('^Esther','Esther and Eddie')(the caret ^ will negate. it will match anything that is not Esther)
+# result.group if result else 'No'
+
+# $ metacharacter placed at the end of a regular expression indicate matching at the end of a string
+# e.g result = re.search('python$', 'python is fun')(the $ sign metacharacter is used to check is a string ends with a particular word
+# result.group() if result else "No"
+# Output: 'not fund'
+
+# Function findall finds every match substring in a string and returns a list of matching substrings
+# example: contact = 'Eddie Esther, Home: 080-694-0144, Work: 0803-444-0144'
+# re.findall(r'\d{4}-\d{3}-\d{4}', contact)
+# output: ['0802-694-0144', '0803-444-0144']
+
+# Function finditer works like findall but returns a lazy iterable of match object. finditer saves memory because it returns its matches one a time.
+# Example: for phone in re.finditer(r'\d{3}- \d{3}-\d{4}', contact):
+#     0802-694-0144
+#     0803-444-0144
+
+# Files I/O
+# Variables, list, set, tuple, dictionary etc all store information temporarily. Data stored in variables are lost when they get out of a scope or program terminate
+# Files provide long term retention of large data even after the program terminates. Data stored in files are persistent
+#
+# You want your program/script to interact with other part of the system such as take input from other components,interact with files or image etc...
+
+# Types of files
+# Text files
+# Image files
+# Audio files
+# PDF files
+# JSON
+#
+# Python scripts/programs can be used to create, update and process data files
