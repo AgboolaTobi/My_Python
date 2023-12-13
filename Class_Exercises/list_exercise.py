@@ -34,3 +34,27 @@ def no_duplicate_number(numbers: list):
         if numbers[number] not in different_numbers:
             different_numbers.append(numbers[number])
     return different_numbers
+
+
+def ascending_sort(numbers: list):
+    for i in range(0, len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[i] >= numbers[j]:
+                numbers[i], numbers[j] = numbers[j], numbers[i]
+    return numbers
+
+
+def descending_sort(numbers: list):
+    for i in range(0, len(numbers)):
+        for j in range(i + 1, len(numbers)):
+            if numbers[j] >= numbers[i]:
+                numbers[j], numbers[i] = numbers[i], numbers[j]
+    return numbers
+
+
+my_list = [1, 2, 5, 6, 3, 8, 10, 4]
+print(ascending_sort(my_list))
+print(descending_sort(my_list))
+
+for i in range(5, 55, 5):
+    print(i, end=" ")

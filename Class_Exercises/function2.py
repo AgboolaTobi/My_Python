@@ -10,4 +10,6 @@ def check_palindrome(numbers):
     else:
         return False
 
+
 print(check_palindrome(717))
+print(check_palindrome(714))

@@ -201,3 +201,10 @@ print(toby2)
 # JSON
 #
 # Python scripts/programs can be used to create, update and process data files
+
+# Reading text from a file
+with open("account.txt", mode='r') as accounts:
+    print(f'{"Account":<10}{"Name":<10}{"Balance":>10}')
+    for record in accounts:
+        account, name, balance = record.split()
+        print(f'{"Account":<10}{"Name":<10}{"Balance":>10}')

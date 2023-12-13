@@ -42,6 +42,7 @@ miles_per_gallons_used = miles / gallons
 counter = 0
 total = 0
 while True:
+    total = total + miles_per_gallons_used
     print("The miles/gallons=", miles_per_gallons_used)
 
     gallons = float(input("Enter the gallons used(-1 to end):"))
@@ -49,7 +50,7 @@ while True:
         break
     miles = float(input("Enter miles driven:"))
     miles_per_gallons_used = miles / gallons
-total = total + miles_per_gallons_used
+
 
 print(total)
 gallons += 1
