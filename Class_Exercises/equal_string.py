@@ -4,10 +4,13 @@ def equal_string(numbers1, numbers2):
         for j in numbers2:
             if i == j:
                 same.append(i)
+            else:
+                return False
 
     return len(numbers1) == len(numbers2) and same
 
 
+print(equal_string('losve', 'love'))
 print(equal_string('love', 'love'))
 
 

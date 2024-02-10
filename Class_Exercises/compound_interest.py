@@ -1,6 +1,7 @@
 principal = int(input("Enter your principal investment amount: "))
 rate = float(input("Enter the rate: "))
-for years in range(1, 31):
+years = 30
+for years in range(years):
     profit = (principal * rate * years) / 100
 
     Total_return = principal * (1 + 10 / 100)

@@ -1,5 +1,6 @@
-def mr_sikiru(name: str, number: int, age: int = 18)-> str:
+def mr_sikiru(name: str, number: int, age: int = 18) -> str:
     pass
+
 
 name = "Joe"
 if name:

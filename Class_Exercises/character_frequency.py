@@ -34,15 +34,17 @@
 # print(frequency_character(string))
 
 
-def frequency(string):
-    dict = {}
-    for element in string:
-        dict.update({element: string.count(element)})
-    return dict
-
-
-string = 'google.com'
-print(frequency(string))
+# def frequency(string):
+#     dict = {}
+#     for element in string:
+#         dict.update({element: string.count(element)})
+#     return dict
+#
+#
+# string = 'google.com'
+# string2 = 'exceedingly'
+# print(frequency(string))
+# print(frequency(string2))
 
 
 def character_frequency_correction(words: str):
@@ -55,5 +57,14 @@ def character_frequency_correction(words: str):
     return result
 
 
-def character_frequency_correction2(words: str):
-    return {word: words.count(word) for word in words}
+dic = {"name": "Agboola Tobi Samuel",
+       "age": 24,
+       "profession": "Software engineer"
+       }
+
+dict2 = "dictionary"
+
+print(character_frequency_correction(dict2))
+
+# def character_frequency_correction2(words: str):
+#     return {word: words.count(word) for word in words}

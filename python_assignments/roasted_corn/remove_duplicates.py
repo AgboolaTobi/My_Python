@@ -1,20 +1,18 @@
-numbers = [15, 20, 25, 20, 10, 5]
-for i in range(0, len(numbers)):
-    for j in range(i+1, len(numbers)):
-        if numbers[i] >= numbers[j]:
-            numbers[i], numbers[j] = numbers[j], numbers[i]
-different_numbers = []
 
-mode_numbers = []
+def most_frequent(numbers):
+    counter = 0
+    duplicate = numbers[0]
 
-for i in numbers:
-    if i in different_numbers:
-        different_numbers.append(i)
+    for element in numbers:
+        curr_frequency = numbers.count(element)
 
-    else:
-        mode_numbers.append(i)
-print(mode_numbers)
-print(different_numbers)
+        if curr_frequency > counter:
+            counter = curr_frequency
+            print(counter)
+            duplicate = element
 
-# good agorithms, can u refactor ??
+    return duplicate
 
+
+List = [2, 1, 2, 3, 3, 3, 3, 3, 2, 1, 3]
+print(most_frequent(List))

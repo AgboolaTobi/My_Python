@@ -129,16 +129,16 @@ import random
 # Once your guessed input matches the displayed number. You win!""")
 
 # user_guess =0
-computer = (random.randint(1, 10))
-user_guess = int(input("Enter your guess between 1 and 10: "))
-print(computer)
+computer = (random.randint(1, 4))
+user_guess = int(input("Enter your guess between 1 and 4: "))
+print("Opps ! Your guess is wrong. Keep trying...", computer, " is the correct guess")
 while computer != user_guess:
-    user_guess = int(input("Enter your guess between 1 and 10: "))
-    computer = (random.randint(1, 10))
-    print(computer)
-    print("You won!")
-
-
+    user_guess = int(input("Enter your guess between 1 and 4: "))
+    computer = (random.randint(1, 4))
+    if computer == user_guess:
+        print("Your guess is correct! ", user_guess, computer, "You won!")
+        break
+    print("Opps ! Your guess is wrong. Keep trying...", computer, " is the correct guess")
 
 # guessed_number = random.randint(1, 10)
 # guess = int(input("Enter your guessed number: "))

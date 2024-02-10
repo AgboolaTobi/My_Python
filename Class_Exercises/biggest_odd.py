@@ -1,21 +1,22 @@
 def biggest_odd(list_of_numbers):
     odds = []
-    for i in list_of_numbers:
-        if int(i) % 2 != 0:
-            odds.append(i)
+    for number in list_of_numbers:
+        if int(number) % 2 != 0:
+            odds.append(number)
     highest = odds[0]
-    for j in odds:
-        if j > highest:
-            highest = j
+    for odd_number in odds:
+        if odd_number > highest:
+            highest = odd_number
     return highest
 
 
-numbers = '92668765'
+numbers = '27668765'
 
-# print(biggest_odd(numbers))
+print(biggest_odd(numbers))
 
 
-highest_odd = max(filter(lambda x: int(x) % 2 == 1, numbers))
+highest_odd = max(filter(lambda number: int(number) % 2 == 1, numbers))
+
 
 print(highest_odd, numbers)
 
@@ -31,3 +32,24 @@ def maximum(my_numbers):
 
 def biggest_odds(numbers1):
     return maximum([number for number in numbers1 if int(number) % 2 != 0])
+
+
+def smallest_odd(given_list):
+    global value
+    odd = []
+
+    for number in given_list:
+        if number % 2 == 1:
+            odd.append(number)
+
+    smallest = odd[0]
+    for value in odd:
+        if value < smallest:
+            value = smallest
+
+    return value
+
+
+given_list = [1, 2, 3, 4, 5, 9, 6, 7]
+print(smallest_odd(given_list))
+print(given_list[1:7])

@@ -10,3 +10,4 @@ def add_sting_to_string(word: str):
 
 
 print(add_sting_to_string("str"))
+print(add_sting_to_string("Box"))

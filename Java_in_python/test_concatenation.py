@@ -6,4 +6,5 @@ class Test(TestCase):
     def test_alternate_combination(self):
         myArray = [1, 2, 3]
         myArray2 = ['a', 'b', 'c']
-        self.assertEqual(array_snacks.alternate_combination(myArray, myArray2))
+        result = [1, "a", 2, "b", 3, "c"]
+        self.assertEqual(array_snacks.alternate_combination(myArray, myArray2), result)
